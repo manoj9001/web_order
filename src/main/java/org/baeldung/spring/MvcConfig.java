@@ -35,7 +35,7 @@ public class MvcConfig implements WebMvcConfigurer {
     @Autowired
     private MessageSource messageSource;
 
-    @Override
+    /*@Override
     public void addViewControllers(final ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("forward:/login");
         registry.addViewController("/login");
@@ -58,17 +58,28 @@ public class MvcConfig implements WebMvcConfigurer {
         registry.addViewController("/changePassword.html");
         registry.addViewController("/users.html");
         registry.addViewController("/qrcode.html");
+    }*/
+
+
+
+    @Override
+    public void addResourceHandlers(final ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/*.js/**").addResourceLocations("/ui/static/");
+        registry.addResourceHandler("/*.css/**").addResourceLocations("/ui/static/");
     }
 
+
+/*
     @Override
     public void configureDefaultServletHandling(final DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
+*/
 
-    @Override
+   /* @Override
     public void addResourceHandlers(final ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources/**").addResourceLocations("/", "/resources/");
-    }
+    }*/
 
     @Override
     public void addInterceptors(final InterceptorRegistry registry) {

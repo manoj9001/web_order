@@ -26,10 +26,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
-		<dependency>
+	<!--	<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
+		</dependency>-->
 
 		<!-- 2fa -->
 		<dependency>
@@ -44,23 +44,23 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
-        <dependency>
+       <!-- <dependency>
             <groupId>org.thymeleaf.extras</groupId>
             <artifactId>thymeleaf-extras-springsecurity4</artifactId>
-        </dependency>
+        </dependency>-->
 
 		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
-			<scope>runtime</scope>
+			<!--<scope>runtime</scope>-->
 		</dependency>
         
-        <dependency>
+       <!--<dependency>
             <groupId>javax.el</groupId>
             <artifactId>el-api</artifactId>
             <version>${javax.el.version}</version>
-        </dependency>
+        </dependency>-->
         
 		<!-- Password Validation -->
 		<dependency>
@@ -80,6 +80,48 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.2.2</version>
+			<scope>runtime</scope>
+		</dependency>
+
+	<!--Tiles Configuration-->
+
+		<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-core</artifactId>
+			<version>3.0.8</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-jsp</artifactId>
+			<version>3.0.8</version>
+		</dependency>
+        <dependency>
+            <groupId>org.apache.tiles</groupId>
+            <artifactId>tiles-extras</artifactId>
+            <version>3.0.8</version>
+        </dependency>
+
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<!--<scope>provided</scope>-->
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<!--Tiles Configuration-->
+
 
 		<dependency>
 			<groupId>com.google.guava</groupId>
@@ -121,7 +163,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>        
+        </dependency>
 
 		<dependency>
 			<groupId>net.logstash.logback</groupId>
@@ -134,11 +176,11 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
-		
-		<dependency>
+
+		<!--<dependency>
             <groupId>nz.net.ultraq.thymeleaf</groupId>
             <artifactId>thymeleaf-layout-dialect</artifactId>
-        </dependency>
+        </dependency>-->
 
 	</dependencies>
 
@@ -152,23 +194,23 @@
 
 		<plugins>
 
-			<plugin>
+			<!--<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
-			</plugin>
+			</plugin>-->
 
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				 <configuration>    
-                	<mainClass>org.baeldung.DemoApplication</mainClass>
-            	</configuration>
+				<!-- <configuration>
+                	<mainClass>org.baeldung.Application</mainClass>
+            	</configuration>-->
 			</plugin>
-
+<!--
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -178,14 +220,14 @@
 						<exclude>**/*LiveTest.java</exclude>
 					</excludes>
 					<systemPropertyVariables>
-						<!-- <provPersistenceTarget>h2</provPersistenceTarget> -->
+						&lt;!&ndash; <provPersistenceTarget>h2</provPersistenceTarget> &ndash;&gt;
 					</systemPropertyVariables>
 				</configuration>
-			</plugin>
+			</plugin>-->
 		</plugins>
 	</build>
 
-	<profiles>
+	<!--<profiles>
 		<profile>
 			<id>integration</id>
 			<build>
@@ -218,7 +260,7 @@
 				</plugins>
 			</build>
 		</profile>
-	</profiles>
+	</profiles>-->
 
 	<properties>
 		<java-version>1.8</java-version>
