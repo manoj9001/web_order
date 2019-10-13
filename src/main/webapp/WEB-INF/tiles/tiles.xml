@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC    "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+		"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="home"  template="/WEB-INF/views/editUsers.jsp"></definition>
+	<definition name="login"  template="/WEB-INF/views/login.jsp"></definition>
+	<definition name="registration"  template="/WEB-INF/views/registration.jsp"></definition>
+
+	<definition name="home"  template="/WEB-INF/views/home.jsp"></definition>
+
+	<definition name="changepassword1"  template="/WEB-INF/views/changepassword1.jsp"></definition>
+
+	<definition name="images" template="/WEB-INF/views/extra/imageUploadExample.jsp"></definition>
+
+	<definition name="forgotpassword"  template="/WEB-INF/views/forgotpassword.jsp"></definition>
+	<definition name="resetpassword" template="/WEB-INF/views/resetpassword.jsp"> </definition>
+	<definition name="loginbase" template="/WEB-INF/views/loginbase.jsp"> </definition>
+
+
+	<definition name="company" template="/WEB-INF/views/company.jsp">
+		<put-attribute name="title" value="Comapny"></put-attribute>
+		<put-attribute name="style" value="/WEB-INF/views/include/style.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/include/sidebar.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
+		<put-attribute name="commonscript" value="/WEB-INF/views/include/commonscript.jsp" />
+
+	</definition>
+
+	<definition name="companySite" template="/WEB-INF/views/company_site.jsp">
+		<put-attribute name="title" value="Comapny Site"></put-attribute>
+		<put-attribute name="style" value="/WEB-INF/views/include/style.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/include/sidebar.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
+		<put-attribute name="commonscript" value="/WEB-INF/views/include/commonscript.jsp" />
+	</definition>
+
+	<definition name="department" template="/WEB-INF/views/department.jsp">
+		<put-attribute name="title" value="Department"></put-attribute>
+		<put-attribute name="style" value="/WEB-INF/views/include/style.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/include/sidebar.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
+		<put-attribute name="commonscript" value="/WEB-INF/views/include/commonscript.jsp" />
+	</definition>
+
+	<definition name="jobtitle" template="/WEB-INF/views/jobtitle.jsp">
+		<put-attribute name="title" value="Job Title"></put-attribute>
+		<put-attribute name="style" value="/WEB-INF/views/include/style.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/include/sidebar.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
+		<put-attribute name="commonscript" value="/WEB-INF/views/include/commonscript.jsp" />
+	</definition>
+
+	<definition name="roleGroup" template="/WEB-INF/views/role_group.jsp">
+		<put-attribute name="title" value="Role Group"></put-attribute>
+		<put-attribute name="style" value="/WEB-INF/views/include/style.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/include/sidebar.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
+		<put-attribute name="commonscript" value="/WEB-INF/views/include/commonscript.jsp" />
+	</definition>
+
+	<definition name="roleGroupDetail" template="/WEB-INF/views/role_group_detail.jsp">
+		<put-attribute name="title" value="Role Group Detail"></put-attribute>
+		<put-attribute name="style" value="/WEB-INF/views/include/style.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/include/sidebar.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
+		<put-attribute name="commonscript" value="/WEB-INF/views/include/commonscript.jsp" />
+	</definition>
+
+	<definition name="userRole" template="/WEB-INF/views/user_role.jsp">
+		<put-attribute name="title" value="User Role"></put-attribute>
+		<put-attribute name="style" value="/WEB-INF/views/include/style.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/include/sidebar.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
+		<put-attribute name="commonscript" value="/WEB-INF/views/include/commonscript.jsp" />
+	</definition>
+
+	<definition name="userRoleGroup" template="/WEB-INF/views/user_role_group.jsp">
+		<put-attribute name="title" value="User Role Group"></put-attribute>
+		<put-attribute name="style" value="/WEB-INF/views/include/style.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/include/sidebar.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
+		<put-attribute name="commonscript" value="/WEB-INF/views/include/commonscript.jsp" />
+	</definition>
+
+	<definition name="departmentInvolved" template="/WEB-INF/views/department_involved.jsp">
+		<put-attribute name="title" value="Department Involved"></put-attribute>
+		<put-attribute name="style" value="/WEB-INF/views/include/style.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/include/sidebar.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
+		<put-attribute name="commonscript" value="/WEB-INF/views/include/commonscript.jsp" />
+	</definition>
+
+	<definition name="userCreation" template="/WEB-INF/views/user_creation.jsp">
+		<put-attribute name="title" value="User creation"></put-attribute>
+		<put-attribute name="style" value="/WEB-INF/views/include/style.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/include/sidebar.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
+		<put-attribute name="commonscript" value="/WEB-INF/views/include/commonscript.jsp" />
+	</definition>
+
+	<definition name="qmsStatus" template="/WEB-INF/views/qms_status.jsp">
+		<put-attribute name="title" value="QMS Statsu"></put-attribute>
+		<put-attribute name="style" value="/WEB-INF/views/include/style.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/include/sidebar.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
+		<put-attribute name="commonscript" value="/WEB-INF/views/include/commonscript.jsp" />
+	</definition>
+
+	<definition name="changeControl" template="/WEB-INF/views/change_control.jsp">
+		<put-attribute name="title" value="Change Control"></put-attribute>
+		<put-attribute name="style" value="/WEB-INF/views/include/style.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/include/sidebar.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
+		<put-attribute name="commonscript" value="/WEB-INF/views/include/commonscript.jsp" />
+	</definition>
+
+	<definition name="QMSMasterData" template="/WEB-INF/views/qms_master_data.jsp">
+		<put-attribute name="title" value="QMS Master Data"></put-attribute>
+		<put-attribute name="style" value="/WEB-INF/views/include/style.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/include/sidebar.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
+		<put-attribute name="commonscript" value="/WEB-INF/views/include/commonscript.jsp" />
+	</definition>
+
+	<definition name="QMSMasterArea" template="/WEB-INF/views/qms_area.jsp">
+		<put-attribute name="title" value="QMS Master Area"></put-attribute>
+		<put-attribute name="style" value="/WEB-INF/views/include/style.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/include/sidebar.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
+		<put-attribute name="commonscript" value="/WEB-INF/views/include/commonscript.jsp" />
+	</definition>
+
+</tiles-definitions>
