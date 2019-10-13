@@ -30,4 +30,16 @@ public class UserController {
         model.addAttribute("users", userService.getUsersFromSessionRegistry());
         return "users";
     }
+
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login(final Model model) {
+        //model.addAttribute("users", userService.getUsersFromSessionRegistry());
+        return "login";
+    }
+
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public String home(final Model model) {
+        return "home";
+    }
 }

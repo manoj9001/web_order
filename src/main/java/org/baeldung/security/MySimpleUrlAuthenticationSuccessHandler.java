@@ -50,7 +50,7 @@ public class MySimpleUrlAuthenticationSuccessHandler implements AuthenticationSu
         }
         clearAuthenticationAttributes(request);
 
-        loginNotification(authentication, request);
+       // loginNotification(authentication, request);
     }
 
     private void loginNotification(Authentication authentication, HttpServletRequest request) {
