@@ -22,7 +22,7 @@ public class BeanConfig {
 	public TilesConfigurer tilesConfigurer() {
 
 		TilesConfigurer tiles = new TilesConfigurer();
-		tiles.setDefinitions(new String[] { "/ui/tiles/tiles.xml" });
+		tiles.setDefinitions(new String[] { "/WEB-INF/tiles/tiles.xml" });
 		tiles.setCheckRefresh(true);
 		return tiles;
 
