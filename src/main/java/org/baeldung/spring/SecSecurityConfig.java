@@ -33,20 +33,6 @@ import org.springframework.security.web.authentication.rememberme.InMemoryTokenR
 public class SecSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
-  /*  @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.httpBasic().and().authorizeRequests()
-                .antMatchers("/security/guest").hasRole("USER")
-                .antMatchers("/security/admin").hasRole("ADMIN")
-                .and().csrf().disable();
-    }
-
-    // In-memory authentication to authenticate the user i.e. the user credentials are stored in the memory.
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication().withUser("guest").password("123").roles("USER");
-        auth.inMemoryAuthentication().withUser("admin").password("123").roles("ADMIN");
-    }*/
 
 
 
@@ -80,36 +66,20 @@ public class SecSecurityConfig extends WebSecurityConfigurerAdapter {
         return super.authenticationManagerBean();
     }
     
-    /*@Override
+    @Override
     protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
         auth.authenticationProvider(authProvider());
     }
-*/
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-                .passwordEncoder(passwordEncoder())
-                .withUser("user").password(passwordEncoder().encode("123456")).roles("USER")
-                .and()
-                .withUser("admin").password(passwordEncoder().encode("123456")).roles("USER", "ADMIN");
-    }
+
+
 
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .antMatchers("/login").permitAll()
-                .antMatchers("/admin/**").hasRole("ADMIN")
-                .antMatchers("/**").hasAnyRole("ADMIN", "USER")
-                .and().formLogin()
-                .and().logout().logoutSuccessUrl("/login").permitAll()
-                .and().csrf().disable();
-    }
+
 
 
     /*@Override
@@ -117,13 +87,13 @@ public class SecSecurityConfig extends WebSecurityConfigurerAdapter {
         web.ignoring().antMatchers("/resources/**");
     }*/
 
-    /*@Override
+    @Override
     protected void configure(final HttpSecurity http) throws Exception {
         // @formatter:off
         http
             .csrf().disable()
             .authorizeRequests()
-                .antMatchers("/login*","/login*","/dashboard", "/logout*", "/signin/**", "/signup/**", "/customLogin",
+                .antMatchers("/login*","/login*","/dashboard", "/logout*", "/signin/**", "/signup/**", "/customLogin","/home",
                         "/user/registration*", "/registrationConfirm*", "/expiredAccount*", "/registration*",
                         "/badUser*", "/user/resendRegistrationToken*" ,"/forgetPassword*", "/user/resetPassword*",
                         "/user/changePassword*", "/emailError*", "/resources/**","/old/user/registration*","/successRegister*","/qrcode*").permitAll()
@@ -132,8 +102,8 @@ public class SecSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().hasAuthority("READ_PRIVILEGE")
                 .and()
             .formLogin()
-                //.loginPage("/dashboard")
-                .defaultSuccessUrl("/dashboard")
+                .loginPage("/login")
+                .defaultSuccessUrl("/home")
                 .failureUrl("/login?error=true")
                 .successHandler(myAuthenticationSuccessHandler)
                 .failureHandler(authenticationFailureHandler)
@@ -154,7 +124,7 @@ public class SecSecurityConfig extends WebSecurityConfigurerAdapter {
              .and()
                 .rememberMe().rememberMeServices(rememberMeServices()).key("theKey");
     // @formatter:on
-    }*/
+    }
 
     // beans
 
