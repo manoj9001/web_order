@@ -43,7 +43,7 @@
 	 	
 </div>
 </form>
-<a class="btn btn-default" href="/user/registration">signup</a>
+<a class="btn btn-default" href="/old/user/registration">signup</a>
 
  
 </body>
